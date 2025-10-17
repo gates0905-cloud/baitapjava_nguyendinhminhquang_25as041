@@ -3,7 +3,7 @@ package Exe1_6;
 public class Account {
     private String id;
     private String name;
-    private int balance = 0; // Giá trị mặc định là 0
+    private int balance = 0;
 
     public Account(String id, String name) {
         this.id = id;
@@ -45,7 +45,7 @@ public class Account {
     public int transferTo(Account anotherAccount, int amount) {
         if (amount <= balance) {
             this.balance -= amount;
-            anotherAccount.credit(amount); // Dùng phương thức credit để chuyển tiền vào tài khoản kia
+            anotherAccount.credit(amount);
         } else {
             System.out.println("Amount exceeded balance");
         }
